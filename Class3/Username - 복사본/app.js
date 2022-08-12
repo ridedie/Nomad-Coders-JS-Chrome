@@ -13,31 +13,28 @@ const USERNAME_KEY = "username";
 //preventDefault() 함수는 브라우저의 기본 동작(form이 submit이면 새로고침을 한다)//을 하지 못하게 막는다
 function onLoginSubmit(event) {
     event.preventDefault();
-    loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
+    loginForm.classList.add(HIDDEN_CLASSNAME);
     //브라우저에 내장되어 있는 작은 DB Key(이름), 값(값을 넣을 변수명)
     //새로고침해도 값이 저장되어있다
     localStorage.setItem(USERNAME_KEY, username);
-    paintGreetings(username);
-}
-
-//greetiog.innerText = "Hello " + username;
-//greetiog.innerText = `Hello ${username}`; //string끼리, 아님 string 변수 연결, 가장 중요한 점은 '', ""이게 아닌 물결표 `` (백틱)이다.
-//greetiog.classList.remove(HIDDEN_CLASSNAME);
-//위에 것을 함수로 요약했다
-function paintGreetings(username) {
-    greetiog.innerText = "Hello " + username;
+    //greetiog.innerText = "Hello " + username;
+    greetiog.innerText = `Hello ${username}`; //string끼리, 아님 string 변수 연결, 가장 중요한 점은 '', ""이게 아닌 물결표 `` (백틱)이다.
     greetiog.classList.remove(HIDDEN_CLASSNAME);
 }
+
+//function() 괄호를 넣어버리면 브라우저는 자동으로 function을 실행한다.
+//submit은 엔터를 누르거나 버튼을 클릭할 때 발생한다.
+loginForm.addEventListener("submit", onLoginSubmit);
 
 //key(값의 이름)을 입력하면 값이 출력된다.
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-if (savedUsername === null) {
-    loginForm.classList.remove(HIDDEN_CLASSNAME);
-    //function() 괄호를 넣어버리면 브라우저는 자동으로 function을 실행한다.
-    //submit은 엔터를 누르거나 버튼을 클릭할 때 발생한다.
-    loginForm.addEventListener("submit", onLoginSubmit);s
-} else {
-    paintGreetings(savedUsername);
+
+console.log(savedUsername);
+
+if(savedUsername === null) {
+
+} else {sl
+
 }
