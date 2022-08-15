@@ -1,12 +1,12 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
-
+const TODOS_KEY = "todos"
 const toDos = [];
 
 //toDos 배열을 로컬스토리지에 집어넣는다
 //아래코드를 쓰지 않으면 배열로 저장되는 것이 아닌 text로 저장된다. 
-//JSON.stringify() js object, array 등등 string으로 만든다
+//JSON.stringify() js object, array 등등 JSON표기법을 따르는 string으로 만든다
 function saveToDos() {
     localStorage.setItem("todos", JSON.stringify(toDos));
 }
@@ -40,3 +40,13 @@ function handleToDoSubmit(event){
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+    function sayHello(item) {
+    console.log("hello");
+}
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+//위에서 JSON에서 string으로 만들었고 지금은 그 string을 배열로 만든다.
+if (savedToDos !== null) {
+    const parsedToDos = JSON.parse(savedToDos);
+    parsedToDos.forEach((item) => console.log("this is the turn of ", item));
+  }
