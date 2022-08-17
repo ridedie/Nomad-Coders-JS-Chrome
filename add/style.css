@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+*:focus {
+    outline: 0;
+}
+
+/* js 기능 필수요소 */
+.hidden  {
+    display: none;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+
+@media screen and (min-width: 1200px){
+    .container {
+        max-width: 960px !important;
+    }
+}
+
+/* 기본 css 리셋 */
+button,
+input,
+textarea {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#r_clock {
+    margin-bottom: 60px;
+    font-size: 200px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #2b292d;
+    font-weight:600;
+}
+
+#greetiog {
+    border-radius: 7px;
+    padding: 20px 50px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #2b292d;
+    font-weight:600;
+    background-color: rgb(255, 255, 255, 0.7);
+    color: black;
+}
+
+#greetiog:hover {
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+#todo-form input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid cornflowerblue;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255, 0.7);
+    color: black;
+    width: 250px;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+#todo-form input:hover {
+    border: 2px solid cornflowerblue;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+
+
+button {
+    border: none;
+    background-color: rgba( 255, 255, 255, 0 );
+    font-weight:600;
+}
+
+button:hover {
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+span {
+    background-color: #fff;
+    border-bottom: 2px solid cornflowerblue;
+    border-radius: 5px;
+    margin-left: 6px;
+    padding: 5px 10px;
+    background-color: rgb(255, 255, 255, 0.7);
+    color: black;
+}
+
+span:hover {
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+#quote {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
